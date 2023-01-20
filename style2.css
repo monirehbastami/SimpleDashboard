@@ -1,0 +1,283 @@
+@import url('https://v1.fontapi.ir/css/Vazir');
+*{
+    padding:0;
+    margin:0;
+    font-family: Vazir, sans-serif;
+}
+html{
+    font-size:16px; 
+}
+body{
+    margin:0;
+    padding:0;
+    direction: rtl;
+    background-color: #f1f2f7;
+}
+.navigation{
+    height: 100%; 
+    width: 0%;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #f9f9f9; 
+    overflow-x: hidden; 
+    transition: 0.5s;
+}
+.navigation > ul{
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: right;
+}
+li:first-child{
+    background-color: #efefef;
+}
+li:nth-child(2){
+    display:flex;
+}
+li a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:1rem;
+    color:#505050;
+    text-decoration: none;
+    padding:0.7rem 1rem;
+}
+li a:hover{
+    color:#000
+}
+.icon{
+    font-size: 1.3rem;
+    color:#384260
+}
+.main{
+    transition: margin-left .5s;
+    display: block;
+}
+.open-nav{
+    backdrop-filter: blur(0.5rem);
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#f9f9f9;
+    height:12vh
+}
+.topbar>div{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.serach{
+    width:40% !important
+}
+.serach-lable{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.search-icon{
+    position: absolute;
+    left:0;
+    right:0;
+    display: flex;
+    align-items:center;
+    padding-left:2px;
+    color:#aaa;
+    font-size: 1rem;
+    padding:5%
+}
+.search-input{
+    display: inline-block;
+    background-color:#fff;
+    width:100wh;
+    border:1px solid #ddd;
+    border-radius: 20px;
+    padding:0.5rem 2.2rem 0.3rem 0.9rem;
+    box-shadow: 2px #505050;
+    width: 100%;
+    height: 2rem;
+}
+.search-input::placeholder{
+    color:slategray;
+    
+}
+.search-input:focus{
+    outline:none;
+    border:1px solid skyblue;
+    border-radius: 5px;
+}
+.toggle{
+    color:#505050;
+
+}
+img{
+    border-radius: 50%;
+
+}
+.cardbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height:20vh
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 0.8rem;
+    padding:1rem;
+    margin:1rem;
+    flex: 1 3 19%;
+    font-size: 1.2rem;
+}
+.carddesc{
+    width:70%
+}
+.numbers{
+    border-bottom: 3px solid rgb(109, 4, 161);
+}
+.iconbox{
+    width:20%
+}
+.fa-eye{
+    color:#04a5a5;
+}
+.fa-shopping-cart{
+    color:rgb(255, 38, 0)
+}
+.fa-funnel-dollar{
+    color:rgb(255, 149, 0)
+}
+.fa-percent{
+    color:rgb(3, 176, 3)
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    height:calc(100vh - 32vh);
+}
+.Chart{
+    width:65%;
+    display: inline;
+    background-color:#fff ;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+.recentCustomers{
+    width:25%;
+    display: inline;
+    background-color:#fff ;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+.Chart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0;
+    font-size: 0.5rem;
+}
+.btn{
+    padding:12px 32px;
+    background-color: #2ec7ff;
+    border-radius: 1rem;
+    color:white;
+    text-decoration: none;
+}
+.Chart-header{
+    margin-bottom:5%
+}
+.customers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:30px 20px;
+}
+.customer-item{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+#line-chart{
+    height:400px;
+}
+@media screen and (min-width:300px){
+    .navigation{ 
+        z-index: -1;
+    }
+    a >.title{
+      visibility: hidden;
+      font-size:0
+    }
+    .topbar{
+        height:3.5rem
+    }
+    .open-nav{
+       width:12%
+    }
+    .slid-main{
+        margin-right:12%;
+    }
+    .navigation > ul{
+        gap:-1.5rem;
+    }
+}
+@media screen and (min-width:768px){
+    .navigation{ 
+        z-index: 1;
+    }
+    a >.title{
+        font-size:0.68rem
+    }    
+   
+}
+
+@media screen and (min-width:1024px){
+    a >.title{
+        font-size:1.2rem
+    }
+    .open-nav{
+        width:15%
+     }
+     .slid-main{
+         margin-right:15%;
+     }
+     .iconbox{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (min-width:1028px){
+    a >.title{
+        visibility: visible;
+        font-size:1.2rem
+    }
+    .navigation > ul{
+        gap:0.8rem;
+    }
+    .open-nav{
+        width:20%
+     }
+     .slid-main{
+         margin-right:20%;
+     }
+}
